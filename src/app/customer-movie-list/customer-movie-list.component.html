@@ -1,0 +1,24 @@
+<p>customer-movie-list works!</p>
+<h3>Movie List</h3>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Box Office</th>
+        <th>Is Active</th>
+        <th>Date Of Launch</th>
+        <th>Genre</th>
+        <th>Has Teaser</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let movie of movies">
+        <td>{{movie.movie_id}}</td>
+        <td>{{movie.title}}</td>
+        <td>{{movie.box_office}}</td>
+        <td>{{movie.active}}</td>
+        <td>{{movie.dateOfLaunch}}</td>
+        <td>{{movie.genre}}</td>
+        <td>{{movie.hasTeaser}}</td>
+        <td><button (click)="add(movie.movie_id)">Add to Favorite</button></td>
+    </tr>
+</table>
